@@ -1,0 +1,52 @@
+{% if categories %}
+<nav id="navbar_top" class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav me-auto ms-auto mt-auto mb-auto">
+
+                {% for category in categories %}
+
+                {% if category.children %}
+
+                <li class="nav-item dropdown mt-auto mb-auto">
+
+                    <a href="{{ category.href }}" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ category.name }}</a>
+
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% for child in category.children %}
+
+                        <li> <a href="{{ child.href }}" class="dropdown-item">{{ child.name }}</a></li>
+
+                        {% endfor %}
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a href=" {{ category.href }}" class="dropdown-item"> Открыть <br> {{ category.name }} </a></li>
+
+
+                    </ul>
+
+                </li>
+
+                {% else %}
+
+                <li class="nav-item mt-auto mb-auto text-center center"><a class="nav-link" href="{{ category.href }}">
+                        {{ category.name }}</a></li>
+
+                <li class="nav-item cart mt-auto mb-auto center">
+                </li>
+                
+                {% endif %}
+
+                {% endfor %}
+                
+                
+            </ul>
+        </div> <!-- navbar-collapse.// -->
+    </div> <!-- container-fluid.// -->
+</nav>
+
+{% endif %}

@@ -1,0 +1,29 @@
+[26-Feb-2023 16:24:17 UTC] PHP Warning:  require_once(E:/OSPanel/domains/oc-webpage.loc/system/startup.php): failed to open stream: No such file or directory in /home/summonra/oc.summon-rain.com/index.php on line 19
+[26-Feb-2023 16:24:17 UTC] PHP Fatal error:  require_once(): Failed opening required 'E:/OSPanel/domains/oc-webpage.loc/system/startup.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/summonra/oc.summon-rain.com/index.php on line 19
+[26-Feb-2023 16:24:20 UTC] PHP Warning:  require_once(E:/OSPanel/domains/oc-webpage.loc/system/startup.php): failed to open stream: No such file or directory in /home/summonra/oc.summon-rain.com/index.php on line 19
+[26-Feb-2023 16:24:20 UTC] PHP Fatal error:  require_once(): Failed opening required 'E:/OSPanel/domains/oc-webpage.loc/system/startup.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/summonra/oc.summon-rain.com/index.php on line 19
+[26-Feb-2023 16:24:44 UTC] PHP Fatal error:  Uncaught Exception: Error: Access denied for user 'summonra_oc_store_user'@'localhost' to database 'summonra_oc_store'<br />Error No: 1044 in /home/summonra/oc.summon-rain.com/system/library/db/mysqli.php:10
+Stack trace:
+#0 /home/summonra/oc.summon-rain.com/system/library/db.php(31): DB\MySQLi->__construct('localhost', 'summonra_oc_sto...', 'difficultpasswo...', 'summonra_oc_sto...', '3306')
+#1 /home/summonra/oc.summon-rain.com/system/framework.php(80): DB->__construct('mysqli', 'localhost', 'summonra_oc_sto...', 'difficultpasswo...', 'summonra_oc_sto...', '3306')
+#2 /home/summonra/oc.summon-rain.com/system/startup.php(104): require_once('/home/summonra/...')
+#3 /home/summonra/oc.summon-rain.com/index.php(21): start('catalog')
+#4 {main}
+  thrown in /home/summonra/oc.summon-rain.com/system/library/db/mysqli.php on line 10
+[26-Feb-2023 16:30:21 UTC] PHP Fatal error:  Uncaught Exception: Error: Access denied for user 'summonra_oc_store_user'@'localhost' to database 'summonra_oc_store'<br />Error No: 1044 in /home/summonra/oc.summon-rain.com/system/library/db/mysqli.php:10
+Stack trace:
+#0 /home/summonra/oc.summon-rain.com/system/library/db.php(31): DB\MySQLi->__construct('localhost', 'summonra_oc_sto...', 'difficultpasswo...', 'summonra_oc_sto...', '3306')
+#1 /home/summonra/oc.summon-rain.com/system/framework.php(80): DB->__construct('mysqli', 'localhost', 'summonra_oc_sto...', 'difficultpasswo...', 'summonra_oc_sto...', '3306')
+#2 /home/summonra/oc.summon-rain.com/system/startup.php(104): require_once('/home/summonra/...')
+#3 /home/summonra/oc.summon-rain.com/index.php(21): start('catalog')
+#4 {main}
+  thrown in /home/summonra/oc.summon-rain.com/system/library/db/mysqli.php on line 10
+[26-Feb-2023 17:45:02 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Image::resize() must be of the type int, null given, called in /home/summonra/oc.summon-rain.com/catalog/model/tool/image.php on line 34 and defined in /home/summonra/oc.summon-rain.com/system/library/image.php:143
+Stack trace:
+#0 /home/summonra/oc.summon-rain.com/catalog/model/tool/image.php(34): Image->resize(NULL, NULL)
+#1 /home/summonra/oc.summon-rain.com/system/engine/loader.php(248): ModelToolImage->resize('catalog/demo/ap...', NULL, NULL)
+#2 /home/summonra/oc.summon-rain.com/system/engine/proxy.php(47): Loader->{closure}(Array, Array)
+#3 /home/summonra/oc.summon-rain.com/catalog/controller/product/manufacturer.php(153): Proxy->__call('resize', Array)
+#4 /home/summonra/oc.summon-rain.com/system/engine/action.php(79): ControllerProductManufacturer->info()
+#5 /home/summonra/oc.summon-rain.com/catalog/controller/startup/router.php(25): Action->execute(Object(Registry))
+#6 /home/summonra/oc.summon-rain.com/system/engine/action.php(79): ControllerStartupRouter->index( in /home/summonra/oc.summon-rain.com/system/library/image.php on line 143
